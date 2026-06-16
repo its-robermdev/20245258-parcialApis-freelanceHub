@@ -10,15 +10,15 @@ import { IsNotEmpty, IsNumber, IsOptional, IsString } from 'class-validator';
 
 export class CreateServiceDto {
   @ApiProperty({
-    description: 'Titulo del servicio publicado',
-    example: 'Diseno de logo profesional',
+    description: 'Título del servicio publicado',
+    example: 'Diseño de logo profesional',
   })
   @IsString()
   @IsNotEmpty()
   title!: string;
 
   @ApiPropertyOptional({
-    description: 'Descripcion detallada del servicio',
+    description: 'Descripción detallada del servicio',
     example: 'Incluye tres propuestas y dos rondas de cambios.',
   })
   @IsOptional()
@@ -27,7 +27,7 @@ export class CreateServiceDto {
 
   @ApiProperty({
     description: 'Categoria a la que pertenece el servicio',
-    example: 'Diseno grafico',
+    example: 'Diseño grafico',
   })
   @IsString()
   @IsNotEmpty()

@@ -16,7 +16,7 @@ export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
   @Post('login')
-  @ApiOperation({ summary: 'Iniciar sesion con email y password' })
+  @ApiOperation({ summary: 'Iniciar sesión con email y password' })
   @ApiResponse({ status: 201, description: 'JWT generado correctamente' })
   @ApiResponse({ status: 401, description: 'Credenciales invalidas' })
   login(@Body() body: LoginDto) {
