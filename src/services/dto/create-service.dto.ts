@@ -1,5 +1,5 @@
 import { Type } from 'class-transformer';
-import { IsNotEmpty, IsNumber, IsString } from 'class-validator';
+import { IsNotEmpty, IsNumber, IsOptional, IsString } from 'class-validator';
 
 /*
   CreateServiceDto
@@ -11,6 +11,10 @@ export class CreateServiceDto {
   @IsString()
   @IsNotEmpty()
   title!: string;
+
+  @IsOptional()
+  @IsString()
+  description?: string;
 
   @IsString()
   @IsNotEmpty()
